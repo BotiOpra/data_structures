@@ -87,6 +87,14 @@ void Stack::showStack()
     cout << "----------\n";
 }
 
+void reverseNums(Stack& st)
+{
+    while(!st.isEmpty()){
+        cout << st.peek();
+        st.pop();
+    }
+}
+
 void Stack::setTop(int top)
 {
     this->top = top;
@@ -105,6 +113,7 @@ int main()
     int items[MAX] = {1, 2, 5, 7, 9};
     st.setTop(5);
     st.setItems(items, st.getTop());
-    st.showStack();
-    cout << st.peek() << endl;
+    reverseNums(st);
+    
+
 }
